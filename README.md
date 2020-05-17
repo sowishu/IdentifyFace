@@ -4,20 +4,20 @@
 ## Software's required: ##
 Python 3.8, MySql workbench, pycharm
 ## Packages:
--mysql.connector
--pip
--Flask
--opencv
--glob
--urllib
--face_recognition
--dlib
--cmake
--render_template
--request
--base64
--time
--calendar
+- mysql.connector
+- pip
+- Flask
+- opencv
+- glob
+- urllib
+- face_recognition
+- dlib
+- cmake
+- render_template
+- request
+- base64
+- time
+- calendar
 ## Getting started: 
 - All the source code are available below. Open it with pycharm
 - The details of database and tables are given in the chennai.profile.sql 
