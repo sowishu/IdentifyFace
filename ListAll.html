@@ -1,0 +1,91 @@
+<head>
+<style>
+#_userid {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#_userid td, #_userid th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#_userid tr:nth-child(even){background-color: #f2f2f2;}
+
+#_userid tr:hover {background-color: #ddd;}
+
+#_userid th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+#D{} {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+    #E{}
+{ background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+}
+</style>
+</head>
+<body>
+
+{{ tablestr | safe }}
+
+<form id="form">
+<input type="hidden" id="userid" name="userid"/>
+</form>
+
+</body>
+
+
+<script language="javascript">
+    function onDelete() {
+        id = event.currentTarget.id
+        id = id.toString().substr(1, id.toString().length)
+        document.getElementById('userid').value = id
+
+
+        var form = document.getElementById('form');
+        form.setAttribute('method', 'post');
+        form.setAttribute('action', 'http://localhost:5000/delete');
+        form.style.display = 'hidden';
+        form.submit();
+    }
+
+    function onEdit() {
+        id = event.currentTarget.id
+        id = id.toString().substr(1, id.toString().length)
+        document.getElementById('userid').value = id
+
+
+        var form = document.getElementById('form');
+        form.setAttribute('method', 'post');
+        form.setAttribute('action', 'http://localhost:5000/edit');
+        form.style.display = 'hidden';
+        form.submit();
+    }
+    //var xhttp = new XMLHttpRequest();
+    // xhttp.open("GET", "http://localhost:5000/delete", true);
+    // xhttp.send();
+
+
+</script>

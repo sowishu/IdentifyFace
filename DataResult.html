@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile page</title>
+</head>
+<style>
+    form {
+        width: 800px;
+        border: 1px solid black;
+        background-color: #e5e5e5;
+    }
+
+    h1 {
+        text-align: center;
+        color: black;
+        font-family: arial;
+        font-variant: small-caps;
+    }
+
+    input, select {
+        font-size: .75em;
+        font-family: arial;
+
+    }
+
+    label {
+        font-variant: small-caps;
+        font-family: arial;
+    }
+
+    mybutton {
+        position: absolute;
+        allign: center;
+
+    }
+
+</style>
+<script>
+    var Rname = "-"
+</script>
+<body onload="setValues()">
+<form action="http://localhost:5000/fetch" method="POST">
+    <h1>USER Identification</h1>
+    <table>
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="name">name</label></td>
+                        <td>
+                            <input type="text" id="name" name="name"><br>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="lastname">lastname</label></td>
+                        <td><input type="text" id="lastname" name="lastname"><br></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="gender" id="genderL">gender</label></td>
+                        <td>
+                            <input type="text" id="gender" name="gender">
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="age">age</label></td>
+                        <td><input type="number" name="age" id="age"/></br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="address">address</label></td>
+                        <td><input type="text" id="address" name="address"/><br></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="phone">Phone Number</label></td>
+                        <td>
+                            <input type="number" id="phone" name="phone" min="0"/><br></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="aadhar">adhar card number</label></td>
+                        <td><input type="number" id="aadhar" name="aadhar"/><br></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="mail">mail id</label></td>
+                        <td><input type="mail" id="mail" name="mail"/><br></td>
+
+                    </tr>
+
+                    </div>
+                </table>
+            </td>
+            <td>
+                <table border="2" width="50">
+                    <tr>
+                        <td width="40">
+                            <canvas id="canvas" width="100" height="100"></canvas>
+                        </td>
+                </table>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+<script>
+
+    function setValues() {
+        document.getElementById("name").value = "{{ Rname }}"
+        document.getElementById("lastname").value = "{{ Rlastname }}"
+        document.getElementById("age").value = "{{ Rage }}"
+        document.getElementById("gender").value = "{{ Rgender }}"
+        document.getElementById("address").value = "{{ Raddress }}"
+        document.getElementById("phone").value = "{{ Rphone }}"
+        document.getElementById("aadhar").value = "{{ Raadhar }}"
+        document.getElementById("mail").value = "{{ Rmail }}"
+    }
+
+</script>
+
+</html>
