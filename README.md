@@ -6,6 +6,7 @@
 - All the source code are available below. Open it with pycharm
 - The details of database and tables are given in the chennai.profile.sql 
 - Install the required softwares and import packages which are given above.
+- Copy all the folders and paste inside your project.
 - Download all the html files and paste under the templates folder
 - Start using the application by running the app.py file
 
